@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OBA - Ramen Auténtico</title>
+  <!-- Estilos -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- LocomotiveScrollJS y GSAP -->
+  <script src="https://unpkg.com/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+        <div class="container">
+          <!-- Logo -->
+          <a href="#" class="navbar-brand">
+            <img src="img/logo.webp" alt="OBA Logo" class="logo">
+          </a>
+      
+          <!-- Botón de Menú -->
+          <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+      
+          <!-- Enlaces del Menú -->
+          <div class="menu" id="menu">
+            <ul>
+              <li><a href="#about">Acerca de</a></li>
+              <li><a href="#menu">Menú</a></li>
+              <li><a href="#contact">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  </header>
+
+  <section class="intro" data-scroll-section>
+    <div class="intro-container">
+      <div class="intro-content">
+        <h1 class="intro-title">
+          Bienvenidos</span>
+        </h1>
+        <p class="intro-text">
+          El ramen que conecta tradición y modernidad. Cada plato, un viaje de sabores.
+        </p>
+      </div>
+      <div class="intro-drawing">
+        <!-- Los dibujos aparecerán dinámicamente aquí -->
+      </div>
+    </div>
+  </section>
+
+
+
+
+ <!-- Sección de Galería -->
+ <section id="gallery" class="gallery" data-scroll-section>
+    <div class="gallery-container">
+      <h2 class="gallery-title" data-scroll data-scroll-speed="1">
+        Nuestra Galería
+      </h2>
+      <div class="gallery-grid">
+        <div class="gallery-item" data-scroll data-scroll-speed="1.5">
+          <img src="img/Galeria.jpg" alt="Ramen 1" class="gallery-image">
+        </div>
+        <div class="gallery-item" data-scroll data-scroll-speed="1.2">
+          <img src="img/galeria1.jpg" alt="Ramen 2" class="gallery-image">
+        </div>
+        <div class="gallery-item" data-scroll data-scroll-speed="0.8">
+          <img src="img/galeria3.jpg" alt="Ramen 3" class="gallery-image">
+        </div>
+        <div class="gallery-item" data-scroll data-scroll-speed="0.5">
+          <img src="img/galeria4.jpg" alt="Ramen 4" class="gallery-image">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
+      
+
+  <script src="scripts.js"></script>
+</body>
+</html>

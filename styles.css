@@ -1,0 +1,322 @@
+/* Configuración General */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #333;
+    overflow: hidden; /* Para scroll fluido */
+  }
+  
+  /* Header */
+  .header {
+    height: 100vh;
+    background-image: url('img/header.jpg'); /* Cambia por tu imagen */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .header-content {
+    text-align: center;
+    color: #e9dfcb;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .logo {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .title span {
+    color: #ffcc00;
+  }
+  
+  .btn {
+    background-color: #ffcc00;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    transition: transform 0.3s;
+  }
+  
+  .btn:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Efectos adicionales */
+  [data-scroll] {
+    will-change: transform;
+  }
+  
+
+
+
+  /* Navegación */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Logo */
+  .logo {
+    width: 150px;
+  }
+  
+  /* Menú Toggle */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background: #333;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  /* Animación del botón */
+  .menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  /* Menú */
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Oculto inicialmente */
+    width: 100%;
+    height: 100%;
+    background: #ffcc00;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: right 0.5s ease;
+    z-index: 999;
+  }
+  
+  .menu.active {
+    right: 0;
+  }
+  
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .menu ul li {
+    margin: 20px 0;
+  }
+  
+  .menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .menu ul li a:hover {
+    color: #000;
+  }
+  
+  .menu ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #333;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  .menu ul li a:hover::after {
+    width: 100%;
+  }
+
+
+
+
+
+
+
+
+
+
+ /* INTRODUCCION */
+/* Sección de Introducción */
+.intro {
+    position: relative;
+    height: 100vh;
+    background: #453025;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .intro-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  .intro-content {
+    flex: 1;
+    text-align: left;
+    color: #fff;
+  }
+  
+  .intro-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .highlight {
+    color: #C51A1B;
+  }
+  
+  .intro-text {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #ffeedb;
+  }
+  
+  .intro-btn {
+    padding: 12px 25px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .intro-btn:hover {
+    background: #444;
+    transform: scale(1.1);
+  }
+  
+  /* Dibujos flotantes dinámicos */
+  .intro-drawing {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* No interactuar con ellos */
+    z-index: 9999;
+  }
+  
+  .drawing {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: scale(0.5);
+    pointer-events: none;
+  }
+  
+  .drawing img {
+    width: 100%;
+    height: auto;
+  }
+  
+
+
+
+
+
+
+
+
+/* GALERIA */
+/* Estilo general de la galería */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f3e9;
+    overflow: hidden;
+  }
+  
+  .gallery {
+    padding: 100px 20px;
+    background-color: #f9f3e9;
+  }
+  
+  .gallery-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #4a2c2a;
+  }
+  
+  .gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  /* Efecto hover para las imágenes */
+  .gallery-item:hover .gallery-image {
+    transform: scale(1.1);
+  }
+  
