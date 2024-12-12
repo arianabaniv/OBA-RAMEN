@@ -1,3 +1,12 @@
+//MENU
+
+
+
+
+
+
+
+
 
 // Inicialización de LocomotiveScroll
 const scroll = new LocomotiveScroll({
@@ -65,7 +74,33 @@ const scroll = new LocomotiveScroll({
 
 
   //galeria
-  
+// Seleccionar todos los items de la galería
+const galleryItems = document.querySelectorAll('.gallery-item');
+const modal = document.getElementById('modal');
+const modalText = document.getElementById('modal-text');
+const modalClose = document.querySelector('.modal-close');
+
+// Agregar evento de clic a cada imagen de la galería
+galleryItems.forEach(item => {
+  item.addEventListener('click', () => {
+    const info = item.getAttribute('data-info'); // Obtener la información del atributo 'data-info'
+    modalText.textContent = info; // Mostrar la información en el modal
+    modal.style.display = 'flex'; // Mostrar el modal
+  });
+});
+
+// Cerrar el modal al hacer clic en el botón de cerrar
+modalClose.addEventListener('click', () => {
+  modal.style.display = 'none'; // Ocultar el modal
+});
+
+// Cerrar el modal al hacer clic fuera del contenido del modal
+window.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.style.display = 'none'; // Ocultar el modal
+  }
+});
+
 
 
 

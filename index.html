@@ -12,42 +12,60 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
-    <nav class="navbar">
-        <div class="container">
-          <!-- Logo -->
-          <a href="#" class="navbar-brand">
-            <img src="img/logo.webp" alt="OBA Logo" class="logo">
-          </a>
-      
-          <!-- Botón de Menú -->
-          <div class="menu-toggle" id="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-      
-          <!-- Enlaces del Menú -->
-          <div class="menu" id="menu">
-            <ul>
-              <li><a href="#about">Acerca de</a></li>
-              <li><a href="#menu">Menú</a></li>
-              <li><a href="#contact">Contacto</a></li>
-            </ul>
-          </div>
+<!-- Header -->
+<header class="header">
+  <nav class="navbar">
+      <div class="container">
+        <!-- Logo (ahora con enlace para ir al inicio) -->
+        <a href="index.html" class="navbar-brand">
+          <img src="img/logo.webp" alt="OBA Logo" class="logo">
+        </a>
+    
+        <!-- Botón de Menú -->
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-      </nav>
-  </header>
+    
+        <!-- Enlaces del Menú -->
+        <div class="menu" id="menu">
+          <!-- Botón X de cierre -->
+        <div class="close-btn" id="close-btn">&times;</div>
+
+          <ul>
+            <li><a href="#about">Acerca de</a></li>
+            <li><a href="#menu">Menú</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</header>
+
 
   <section class="intro" data-scroll-section>
     <div class="intro-container">
       <div class="intro-content">
         <h1 class="intro-title">
-          Bienvenidos</span>
+          BIENVENIDOS</span>
         </h1>
         <p class="intro-text">
-          El ramen que conecta tradición y modernidad. Cada plato, un viaje de sabores.
+          Soy la abuela Yuki, y en mi cocina, los secretos de la tradición japonesa se pasan de 
+          mano en mano, como un legado preciado. Desde que era pequeña, mi abuela me enseñó cómo 
+          preparar ramen con los ingredientes más frescos, cocinados con paciencia y cuidado. 
+          Y ahora, me alegra compartir esos mismos sabores con ustedes.Cada tazón de ramen que 
+          servimos aquí tiene un pedacito de mi corazón. Utilizo recetas que han sido transmitidas
+          por generaciones, sin prisa, como el buen ramen debe ser. El caldo se cocina lentamente,
+           las fideos se hacen con cariño, y los ingredientes son seleccionados con la misma 
+           dedicación con la que mi abuela me enseñó a cocinar.Aquí no solo encontrarás comida, 
+           sino una experiencia que te lleva al calor de un hogar japonés. Te invito a disfrutar 
+           de la misma comida que preparaba para mi familia, la comida que te abraza, que te 
+           cuida y te transporta a esos días tranquilos de mi niñez.Disfruta de este ramen, 
+           querido visitante, y deja que cada bocado te recuerde lo que es el verdadero sabor de 
+           la tradición.
+           Con cariño,
+           Abuela Yuki.
         </p>
       </div>
       <div class="intro-drawing">
@@ -58,29 +76,53 @@
 
 
 
-
- <!-- Sección de Galería -->
- <section id="gallery" class="gallery" data-scroll-section>
+ <!-- GALERIA -->
+  <section id="gallery" class="gallery">
     <div class="gallery-container">
-      <h2 class="gallery-title" data-scroll data-scroll-speed="1">
-        Nuestra Galería
-      </h2>
+      <h2 class="gallery-title">NUESTRA GALERÍA</h2>
       <div class="gallery-grid">
-        <div class="gallery-item" data-scroll data-scroll-speed="1.5">
-          <img src="img/Galeria.jpg" alt="Ramen 1" class="gallery-image">
+        <!-- Imagen 1 -->
+        <div class="gallery-item" data-info="Este es el ramen más popular.">
+          <div class="gallery-image-wrapper">
+            <img src="img/Galeria.jpg" alt="Ramen 1" class="gallery-image">
+          </div>
         </div>
-        <div class="gallery-item" data-scroll data-scroll-speed="1.2">
-          <img src="img/galeria1.jpg" alt="Ramen 2" class="gallery-image">
+        <!-- Imagen 2 -->
+        <div class="gallery-item" data-info="Un ramen con ingredientes frescos.">
+          <div class="gallery-image-wrapper">
+            <img src="img/galeria1.jpg" alt="Ramen 2" class="gallery-image">
+          </div>
         </div>
-        <div class="gallery-item" data-scroll data-scroll-speed="0.8">
-          <img src="img/galeria3.jpg" alt="Ramen 3" class="gallery-image">
+        <!-- Imagen 3 -->
+        <div class="gallery-item" data-info="Este ramen tiene un sabor único.">
+          <div class="gallery-image-wrapper">
+            <img src="img/galeria3.jpg" alt="Ramen 3" class="gallery-image">
+          </div>
         </div>
-        <div class="gallery-item" data-scroll data-scroll-speed="0.5">
-          <img src="img/galeria4.jpg" alt="Ramen 4" class="gallery-image">
+        <!-- Imagen 4 -->
+        <div class="gallery-item" data-info="Ramen tradicional con un toque especial.">
+          <div class="gallery-image-wrapper">
+            <img src="img/galeria4.jpg" alt="Ramen 4" class="gallery-image">
+          </div>
         </div>
       </div>
     </div>
   </section>
+  
+  <!-- Modal con información -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <p id="modal-text"></p>
+      <button class="modal-close">Cerrar</button>
+    </div>
+  </div>
+  
+  
+
+
+
+
+
   
   
   

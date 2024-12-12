@@ -1,176 +1,149 @@
 /* Configuración General */
 body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Helvetica Neue', sans-serif;
-    color: #333;
-    overflow: hidden; /* Para scroll fluido */
-  }
-  
-  /* Header */
-  .header {
-    height: 100vh;
-    background-image: url('img/header.jpg'); /* Cambia por tu imagen */
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .header-content {
-    text-align: center;
-    color: #e9dfcb;
-    z-index: 2;
-    position: relative;
-  }
-  
-  .logo {
-    width: 150px;
-    margin-bottom: 20px;
-  }
-  
-  .title {
-    font-size: 3rem;
-    margin: 0;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  }
-  
-  .title span {
-    color: #ffcc00;
-  }
-  
-  .btn {
-    background-color: #ffcc00;
-    color: black;
-    padding: 10px 20px;
-    border: none;
-    font-size: 1.2rem;
-    margin-top: 20px;
-    transition: transform 0.3s;
-  }
-  
-  .btn:hover {
-    transform: scale(1.1);
-  }
-  
-  /* Efectos adicionales */
-  [data-scroll] {
-    will-change: transform;
-  }
-  
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #333;
+}
 
+  
+/* Header */
+.header {
+  height: 100vh;
+  background-image: url('img/header.jpg'); /* Cambia por tu imagen */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
 
+/* Logo */
+.logo {
+  width: 150px;
+  transition: transform 0.3s ease;
+}
 
-  /* Navegación */
+/* Navegación */
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 10px 20px;
-    background: rgba(255, 255, 255, 0.9);
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  /* Logo */
-  .logo {
-    width: 150px;
-  }
-  
-  /* Menú Toggle */
-  .menu-toggle {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-  }
-  
-  .menu-toggle span {
-    width: 30px;
-    height: 3px;
-    background: #333;
-    transition: transform 0.3s ease, background 0.3s ease;
-  }
-  
-  /* Animación del botón */
-  .menu-toggle.active span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-  
-  .menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .menu-toggle.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-  
-  /* Menú */
-  .menu {
-    position: fixed;
-    top: 0;
-    right: -100%; /* Oculto inicialmente */
-    width: 100%;
-    height: 100%;
-    background: #ffcc00;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    transition: right 0.5s ease;
-    z-index: 999;
-  }
-  
-  .menu.active {
-    right: 0;
-  }
-  
-  .menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-  }
-  
-  .menu ul li {
-    margin: 20px 0;
-  }
-  
-  .menu ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 1.5rem;
-    font-weight: bold;
-    position: relative;
-    transition: color 0.3s ease;
-  }
-  
-  .menu ul li a:hover {
-    color: #000;
-  }
-  
-  .menu ul li a::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    background: #333;
-    bottom: -5px;
-    left: 0;
-    transition: width 0.3s ease;
-  }
-  
-  .menu ul li a:hover::after {
-    width: 100%;
-  }
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+/* Menú Toggle */
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 30px;
+  height: 3px;
+  background: #333;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Animación del botón de menú */
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Menú lateral */
+.menu {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Oculto inicialmente */
+  width: 100%;
+  height: 100%;
+  background: #ffcc00;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: right 0.5s ease;
+  z-index: 999;
+}
+
+/* Cuando el menú está activo, se despliega */
+.menu.active {
+  right: 0;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.menu ul li {
+  margin: 20px 0;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+  color: #000;
+}
+
+.menu ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #333;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.menu ul li a:hover::after {
+  width: 100%;
+}
+
+/* Estilo para el botón "X" de cierre */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2.5rem; /* Tamaño de la "X" */
+  color: #333;
+  cursor: pointer;
+  z-index: 1001; /* Asegúrate de que esté sobre el menú */
+  transition: color 0.3s ease;
+}
+
+/* Evitar que la "X" desaparezca al poner el ratón */
+.close-btn:hover {
+  color: #950404; /* Cambia el color de la "X" al pasar el ratón */
+}
 
 
 
@@ -207,8 +180,9 @@ body, html {
   }
   
   .intro-title {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: bold;
+    font-family: monospace;
     margin-bottom: 20px;
   }
   
@@ -217,12 +191,17 @@ body, html {
   }
   
   .intro-text {
-    font-size: 1.5rem;
-    line-height: 1.8;
+    font-size: 1rem;
+    line-height: 1.5;
     margin-bottom: 30px;
     color: #ffeedb;
-  }
-  
+    max-width: 600px; /* Opcional: Limita el ancho del texto para mejorar la legibilidad */
+}
+
+.intro-text p {
+    margin-bottom: 15px; /* Espacio entre párrafos */
+}
+
   .intro-btn {
     padding: 12px 25px;
     background: #333;
@@ -271,52 +250,119 @@ body, html {
 
 
 /* GALERIA */
-/* Estilo general de la galería */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f9f3e9;
-    overflow: hidden;
+
+/* Estilo de la galería */
+.gallery {
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  margin-top: -20; /* Eliminamos el margen superior para pegar la galería a la sección de introducción */
+}
+
+/* Título de la galería */
+.gallery-title {
+  font-size: 2.5rem;
+  font-family: monospace;
+  margin-bottom: 100px; /* Aumentamos el margen inferior para separar el título de las imágenes */
+}
+
+/* Contenedor de las imágenes en la galería */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Tamaño de las imágenes 300px */
+  gap: 20px;
+  position: relative;
+}
+
+/* Contenedor de la imagen en círculo */
+.gallery-image-wrapper {
+  position: relative;
+  width: 300px; /* Ajustamos el tamaño a 300px */
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50%; /* Forma circular */
+  margin: 0 auto;
+  animation: move 4s ease-in-out infinite, bounce 2s ease-in-out infinite; /* Animaciones */
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 50%; /* Asegura que la imagen esté también dentro de un círculo */
+}
+
+/* Efecto hover de zoom */
+.gallery-item:hover .gallery-image {
+  transform: scale(1.1); /* Zoom suave */
+}
+
+/* Animación de movimiento aleatorio */
+@keyframes move {
+  0% {
+    transform: translateX(0) translateY(0);
   }
-  
-  .gallery {
-    padding: 100px 20px;
-    background-color: #f9f3e9;
+  25% {
+    transform: translateX(30px) translateY(-30px);
   }
-  
-  .gallery-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-    color: #4a2c2a;
+  50% {
+    transform: translateX(-30px) translateY(30px);
   }
-  
-  .gallery-container {
-    max-width: 1200px;
-    margin: 0 auto;
+  75% {
+    transform: translateX(20px) translateY(-20px);
   }
-  
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+  100% {
+    transform: translateX(0) translateY(0);
   }
-  
-  .gallery-item {
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Animación de rebote */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
   }
-  
-  .gallery-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+  50% {
+    transform: translateY(-20px);
   }
-  
-  /* Efecto hover para las imágenes */
-  .gallery-item:hover .gallery-image {
-    transform: scale(1.1);
-  }
-  
+}
+
+/* Modal */
+.modal {
+  display: none; /* Inicialmente oculto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+}
+
+.modal-close {
+  background-color: #ffcc00;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.modal-close:hover {
+  background-color: #ff9900;
+}
+
+#modal-text {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
